@@ -3,7 +3,8 @@ import j from 'jscodeshift'
 const { MemberExpression } = j
 
 const MATCHERS = {
-  'toBe': 'be'
+  'toBe': 'be',
+  'toEqual': 'equal'
 }
 
 const MATCHER_NAMES = Object.keys(MATCHERS)
