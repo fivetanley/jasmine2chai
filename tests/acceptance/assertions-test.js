@@ -16,6 +16,11 @@ describe('assertions codeshift', function () {
   it('converts toMatch to to.match', function () {
     assertConversion('match')
   })
+
+  it('converts toBeDefined to to.not.be.undefined', function () {
+    process.yas = true
+    assertConversion('defined')
+  })
 })
 
 function assertConversion (fixtureName) {
