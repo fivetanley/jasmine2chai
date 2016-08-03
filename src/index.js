@@ -4,7 +4,8 @@ const { MemberExpression } = j
 
 const MATCHERS = {
   'toBe': 'be',
-  'toEqual': 'equal'
+  'toEqual': 'equal',
+  'toMatch': 'match'
 }
 
 const MATCHER_NAMES = Object.keys(MATCHERS)

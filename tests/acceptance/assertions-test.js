@@ -12,6 +12,10 @@ describe('assertions codeshift', function () {
   it('converts isEqual to to.equal', function () {
     assertConversion('equal')
   })
+
+  it('converts toMatch to to.match', function () {
+    assertConversion('match')
+  })
 })
 
 function assertConversion (fixtureName) {
