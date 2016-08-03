@@ -4,8 +4,9 @@
   "description": "Converts Jasmine assertions to chai.js assertions",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm run compile && mocha dist/tests/**/*.js",
-    "compile": "babel --presets 2015 src -d dist/src && babel --presets 2015 tests -d dists/tests"
+    "test": "standard && npm run compile && mocha dist/tests/acceptance/*.js",
+    "compile": "babel src -d dist/src && babel tests -d dist/tests",
+    "standard": "standard"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,16 @@
     "babel-cli": "^6.11.4",
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
-    "mocha": "^3.0.0"
+    "mocha": "^3.0.0",
+    "standard": "^7.1.2"
+  },
+  "standard": {
+    "ignore": [
+      "tests/fixtures/**/*.js",
+      "dist/**/*"
+    ]
+  },
+  "dependencies": {
+    "jscodeshift": "^0.3.27"
   }
 }
