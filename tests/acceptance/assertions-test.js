@@ -18,8 +18,11 @@ describe('assertions codeshift', function () {
   })
 
   it('converts toBeDefined to to.not.be.undefined', function () {
-    process.yas = true
     assertConversion('defined')
+  })
+
+  it('converts toBeNull to to.be.null', function () {
+    assertConversion('null')
   })
 })
 

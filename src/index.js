@@ -6,7 +6,8 @@ const { MemberExpression } = j
 const NAMES = {
   'toBe': 'be',
   'toEqual': 'equal',
-  'toMatch': 'match'
+  'toMatch': 'match',
+  'toBeNull': 'be.null'
 }
 
 const MATCHERS = Object.keys(NAMES).reduce((memo, name) => {
