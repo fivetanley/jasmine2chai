@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var package = require('../package');
+
+process.stdout.setEncoding('utf8')
+process.stdin.setEncoding('utf8')
+
+program
+  .version(package.version)
+  .usage('<file>')
+  .action(function(file) {
+    var fs = require('fs')
+    var path = require('path')
+    var shift = require('../dist/src').default
+
+    var content = fs.readFileSync(path.join(process.cwd(), file), 'utf8')
+
+    process.stdout.write(shift(content))
+  })
+  .parse(process.argv)
+
