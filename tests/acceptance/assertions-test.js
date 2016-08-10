@@ -52,6 +52,10 @@ describe('assertions codeshift', function () {
   it('converts toThrow to to.throw', function () {
     assertConversion('to-throw')
   })
+
+  it('toThrowError to to.throw', function () {
+    assertConversion('to-throw-error')
+  })
 })
 
 function assertConversion (fixtureName) {
