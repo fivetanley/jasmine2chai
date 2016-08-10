@@ -1,6 +1,6 @@
 {
   "name": "jasmine2chai",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Converts Jasmine assertions to chai.js assertions",
   "main": "dist/index.js",
   "scripts": {
@@ -39,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "commander": "^2.9.0",
     "jscodeshift": "^0.3.27"
   }
 }
