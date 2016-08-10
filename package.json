@@ -6,6 +6,7 @@
   "scripts": {
     "test": "standard && npm run compile && mocha dist/tests/acceptance/*.js",
     "compile": "babel src -d dist/src && babel tests -d dist/tests",
+    "prepublish": "npm run test",
     "standard": "standard"
   },
   "repository": {
