@@ -32,6 +32,10 @@ describe('assertions codeshift', function () {
   it('converts toBeFalsy to not.to.be.ok', function () {
     assertConversion('falsy')
   })
+
+  it('converts toContain to to.include', function () {
+    assertConversion('contain')
+  })
 })
 
 function assertConversion (fixtureName) {
