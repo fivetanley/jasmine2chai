@@ -15,6 +15,18 @@ Jasmine2Chai uses
 as possible) transform your test code into something that is compatible
 with chai.js assertions, *while leaving your code style alone.*
 
+## Installation
+
+`npm install -g jasmine2chai`
+
+## Usage
+
+Print out a converted file to the terminal (stdout):
+
+```
+jasmine2chai myfile.js
+```
+
 ## Translations
 
 ### toBe -> to.be
