@@ -24,6 +24,10 @@ describe('assertions codeshift', function () {
   it('converts toBeNull to to.be.null', function () {
     assertConversion('null')
   })
+
+  it('converts toBeTruthy to to.be.ok', function () {
+    assertConversion('truthy')
+  })
 })
 
 function assertConversion (fixtureName) {

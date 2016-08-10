@@ -1,6 +1,10 @@
 import j from 'jscodeshift'
 
-const CONVERT_CALL_TO_MEMBER_EXPRESSION = ['toBeDefined', 'toBeNull']
+const CONVERT_CALL_TO_MEMBER_EXPRESSION = [
+  'toBeDefined',
+  'toBeNull',
+  'toBeTruthy'
+]
 
 export default function callExpressionToMemberExpression ($) {
   return $.find(j.CallExpression)

@@ -33,6 +33,7 @@
   },
   "standard": {
     "ignore": [
+      "introduction.js",
       "tests/fixtures/**/*.js",
       "dist/**/*"
     ]

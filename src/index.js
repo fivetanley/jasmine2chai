@@ -7,7 +7,8 @@ const NAMES = {
   'toBe': 'be',
   'toEqual': 'equal',
   'toMatch': 'match',
-  'toBeNull': 'be.null'
+  'toBeNull': 'be.null',
+  'toBeTruthy': 'be.ok'
 }
 
 const MATCHERS = Object.keys(NAMES).reduce((memo, name) => {
