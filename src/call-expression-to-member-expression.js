@@ -3,7 +3,8 @@ import j from 'jscodeshift'
 const CONVERT_CALL_TO_MEMBER_EXPRESSION = [
   'toBeDefined',
   'toBeNull',
-  'toBeTruthy'
+  'toBeTruthy',
+  'toBeFalsy'
 ]
 
 export default function callExpressionToMemberExpression ($) {

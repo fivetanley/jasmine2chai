@@ -1,5 +1,7 @@
 import j from 'jscodeshift'
 import callExpressionToMemberExpression from './call-expression-to-member-expression'
+import convertToBeDefined from './to-be-defined'
+import convertToBeFalsy from './to-be-falsy'
 
 const { MemberExpression } = j
 
@@ -17,6 +19,7 @@ const MATCHERS = Object.keys(NAMES).reduce((memo, name) => {
 }, Object.create(null))
 
 MATCHERS.toBeDefined = convertToBeDefined
+MATCHERS.toBeFalsy = convertToBeFalsy
 
 const MATCHER_NAMES = Object.keys(MATCHERS)
 
@@ -36,20 +39,6 @@ function jasmine2ChaiName (jasmineName) {
   return NAMES[jasmineName]
 }
 
-function convertToBeDefined (node) {
-  let expectExpression = node.value.object
-  let to
-  if (isNegated(node)) {
-    to = j.memberExpression(expectExpression.object, j.identifier('to'))
-  } else {
-    to = j.memberExpression(expectExpression, j.identifier('to'))
-    to = j.memberExpression(to, j.identifier('not'))
-  }
-  const be = j.memberExpression(to, j.identifier('be'))
-  const _undefined = j.memberExpression(be, j.identifier('undefined'))
-  return _undefined
-}
-
 function translate (newName) {
   return function (node) {
     const name = jasmine2ChaiName(node.value.property.name)
@@ -58,10 +47,5 @@ function translate (newName) {
     const assertion = j.memberExpression(to, j.identifier(name))
     return assertion
   }
-}
-
-function isNegated (node) {
-  return (j.MemberExpression.check(node.value.object) &&
-    node.value.object.property.name === 'not')
 }
 
