@@ -40,6 +40,10 @@ describe('assertions codeshift', function () {
   it('converts toBeLessThan to to.be.below', function () {
     assertConversion('less-than')
   })
+
+  it('converts toBeGreaterThan to to.be.above', function () {
+    assertConversion('greater-than')
+  })
 })
 
 function assertConversion (fixtureName) {
