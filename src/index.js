@@ -11,7 +11,8 @@ const NAMES = {
   'toMatch': 'match',
   'toBeNull': 'be.null',
   'toBeTruthy': 'be.ok',
-  'toContain': 'include'
+  'toContain': 'include',
+  'toBeLessThan': 'be.below'
 }
 
 const MATCHERS = Object.keys(NAMES).reduce((memo, name) => {

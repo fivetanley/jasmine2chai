@@ -36,6 +36,10 @@ describe('assertions codeshift', function () {
   it('converts toContain to to.include', function () {
     assertConversion('contain')
   })
+
+  it('converts toBeLessThan to to.be.below', function () {
+    assertConversion('less-than')
+  })
 })
 
 function assertConversion (fixtureName) {
