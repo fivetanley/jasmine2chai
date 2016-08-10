@@ -1,4 +1,4 @@
-jasmine2chai
+jasmine2chai[![Build Status](https://travis-ci.org/fivetanley/jasmine2chai.svg?branch=master)](https://travis-ci.org/fivetanley/jasmine2chai)[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 -------
 
 ## Introduction
