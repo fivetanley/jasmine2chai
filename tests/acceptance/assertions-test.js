@@ -48,6 +48,10 @@ describe('assertions codeshift', function () {
   it('converts toBeCloseTo to to.be.closeTo', function () {
     assertConversion('close-to')
   })
+
+  it('converts toThrow to to.throw', function () {
+    assertConversion('to-throw')
+  })
 })
 
 function assertConversion (fixtureName) {
