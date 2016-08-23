@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Converts Jasmine assertions to chai.js assertions",
   "main": "dist/index.js",
+  "bin": {
+    "jasmine2chai": "bin/jasmine2chai"
+  },
   "scripts": {
     "test": "standard && npm run compile && mocha dist/tests/acceptance/*.js",
     "compile": "babel src -d dist/src && babel tests -d dist/tests",
