@@ -3,8 +3,12 @@
 var program = require('commander');
 var package = require('../package');
 
-process.stdout.setEncoding('utf8')
-process.stdin.setEncoding('utf8')
+if (typeof process.stdout.setEncoding === 'function') {
+  process.stdout.setEncoding('utf8')
+}
+if (typeof process.stdin.setEncoding === 'function') {
+  process.stdin.setEncoding('utf8')
+}
 
 program
   .version(package.version)
