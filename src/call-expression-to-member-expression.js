@@ -4,7 +4,8 @@ const CONVERT_CALL_TO_MEMBER_EXPRESSION = [
   'toBeDefined',
   'toBeNull',
   'toBeTruthy',
-  'toBeFalsy'
+  'toBeFalsy',
+  'toHaveBeenCalled'
 ]
 
 export default function callExpressionToMemberExpression ($) {
