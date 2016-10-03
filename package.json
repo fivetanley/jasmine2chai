@@ -1,6 +1,6 @@
 {
   "name": "jasmine2chai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converts Jasmine assertions to chai.js assertions",
   "main": "dist/index.js",
   "bin": {
