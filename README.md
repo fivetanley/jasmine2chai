@@ -230,3 +230,56 @@ expect(foo).to.throw(/bar/);
 expect(foo).to.throw(TypeError);
 expect(foo).to.throw(TypeError, "foo bar baz");
 ```
+
+## Spy Migrations
+
+**Important Note**:
+
+You'll need the [sinon-chai](https://github.com/domenic/sinon-chai)
+plugins for this to work. In addition, `spyOn` calls are not yet
+translated. This only translates the assertions on spies.
+
+### toHaveBeenCalled -> to.have.been.called
+
+Jasmine assertion:
+
+```javascript
+expect(foo.setBar).toHaveBeenCalled();
+```
+
+chai assertion:
+
+```javascript
+expect(foo.setBar).to.have.been.called;
+```
+
+### toHaveBeenCalledWith -> to.have.been.calledWith
+
+Jasmine assertion:
+
+```javascript
+expect(foo.setBar).toHaveBeenCalledWith(123);
+expect(foo.setBar).toHaveBeenCalledWith(456, 'another param');
+```
+
+chai assertion:
+
+```javascript
+expect(foo.setBar).to.have.been.calledWith(123);
+expect(foo.setBar).to.have.been.calledWith(456, 'another param');
+```
+
+### toHaveBeenCalledTimes -> to.have.callCount
+
+Jasmine assertion:
+
+```javascript
+expect(foo.setBar).toHaveBeenCalledTimes(2);
+```
+
+chai assertion:
+
+```javascript
+expect(foo.setBar).to.have.callCount(2);
+```
+

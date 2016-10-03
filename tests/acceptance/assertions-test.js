@@ -56,6 +56,10 @@ describe('assertions codeshift', function () {
   it('toThrowError to to.throw', function () {
     assertConversion('to-throw-error')
   })
+
+  it('toHaveBeenCalledWith to to.have.been.calledWith', function () {
+    assertConversion('called-with')
+  })
 })
 
 function assertConversion (fixtureName) {
